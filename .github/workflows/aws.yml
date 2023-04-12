@@ -27,7 +27,6 @@ jobs:
 
   - name: Build and push Docker image
     run: |
-      file: ./backend/Dockerfile
       docker build -t ${{ env.DOCKER_HUB_USERNAME }}/backend:latest
       docker push ${{ env.DOCKER_HUB_USERNAME }}/backend:latest
 
