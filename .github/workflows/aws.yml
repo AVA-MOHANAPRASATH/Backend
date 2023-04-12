@@ -30,8 +30,8 @@ jobs:
       context: .
       file: ./backend/Dockerfile
       push: true
-      docker build -t mohanaprasath/backend:tagname .
-      docker push mohanaprasath/backend:tagname
+      docker build -t mohanaprasath/backend:latest .
+      docker push mohanaprasath/backend:latest
 
   - name: Configure AWS credentials
     uses: aws-actions/configure-aws-credentials@v1
