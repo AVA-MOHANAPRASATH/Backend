@@ -27,9 +27,7 @@ jobs:
 
   - name: Build and push Docker image
     run: |
-      context: .
       file: ./backend/Dockerfile
-      push: true
       docker build -t mohanaprasath/backend:latest .
       docker push mohanaprasath/backend:latest
 
