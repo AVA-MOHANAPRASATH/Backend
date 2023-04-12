@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./backend/Dockerfile
           push: true
-          tags: ${{ secrets.USERNAME }}/Backend:latest
+          tags: ${{ secrets.USERNAME }}/backend:latest
