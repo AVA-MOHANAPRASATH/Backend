@@ -28,8 +28,8 @@ jobs:
   - name: Build and push Docker image
     run: |
       file: ./backend/Dockerfile
-      docker build -t mohanaprasath/backend:latest .
-      docker push mohanaprasath/backend:latest
+      docker build -t ${{ env.DOCKER_HUB_USERNAME }}/backend:latest .
+      docker push ${{ env.DOCKER_HUB_USERNAME }}/backend:latest
 
   - name: Configure AWS credentials
     uses: aws-actions/configure-aws-credentials@v1
@@ -48,7 +48,7 @@ jobs:
       ecs deploy \
       --service-name lin-NP-USW1-SN\
       --cluster lin-NP-USW1-ECS \
-      --mohanaprasath/mohanaprasath/backend:tagname \
+      --mohanaprasath/backend:latest \
       --timeout 900 \
       --max-healthy-percent 200 \
       --min-healthy-percent 50
