@@ -27,8 +27,8 @@ jobs:
 
   - name: Build and push Docker image
     run: |
-      docker build -t mohanaprasath/mohanaprasath/backend:tagname .
-      docker push mohanaprasath/mohanaprasath/backend:tagname
+      docker build -t mohanaprasath/backend:tagname .
+      docker push mohanaprasath/backend:tagname
 
   - name: Configure AWS credentials
     uses: aws-actions/configure-aws-credentials@v1
