@@ -1,7 +1,7 @@
 name: Deploy to ECS
 
 on:
- workflow_dispatch: 
+ push 
 
 env:
  AWS_REGION: us-west-1
